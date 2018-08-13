@@ -1,4 +1,6 @@
-[
+import { Contributor } from './contributor';
+
+const arr = [
   {
     address: "0x47c62777fa377e52b275832c01297433a26f83b0",
     balance: 1.00
@@ -19,4 +21,12 @@
     address: "0xae65934d6eeb5f134a096125d94e22fd38ed85dd",
     balance: 30.00
   }
-]
+];
+
+const arr2 = [];
+
+arr.forEach(c=>{
+  arr2.push(new Contributor(c.address, c.balance));
+});
+
+export const CONTRIBUTORS = arr2;

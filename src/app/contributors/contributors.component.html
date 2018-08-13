@@ -1,0 +1,22 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Contributors</h3>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Address</th><th class="text-right">Balance</th><th class="text-right">Whitelisted</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contr of contributors" class="clickable">
+        <td>{{contr.address}}</td>
+        <td class="text-right">{{contr.balance | currency : ' ' }} Ξ</td>
+        <td class="text-right">{{contr.whitelisted}}</td>
+        <!-- <td class="text-right">n/a</td> -->
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
